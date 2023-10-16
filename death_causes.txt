@@ -1,0 +1,14 @@
+heart disease
+high blood pressure
+smoking
+air pollution
+high blood sugar
+obesity
+alzheimers
+diabetes
+car accident
+accident
+HIV
+murder
+terrorism
+malaria
