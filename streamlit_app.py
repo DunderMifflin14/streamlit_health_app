@@ -23,7 +23,7 @@ df = pd.DataFrame(data)
 
 
 # Streamlit app title
-st.title("Simple Bar Chart in Streamlit")
+st.title("Simple Bar Chart in Streamlit edited by Marta")
 
 # Display a message
 st.write("Hello, Streamlit!")
