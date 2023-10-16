@@ -4,6 +4,8 @@
 
 import streamlit as st
 import pandas as pd
+import matplotlib
+from matplotlib import pyplot
 import matplotlib.pyplot as plt
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
