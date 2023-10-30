@@ -10,10 +10,11 @@ import pandas as pd
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
 # Create a DataFrame
-data = {
-    'Category': ['A', 'B', 'C', 'D'],
-    'Values'  : [10, 20, 15, 30]
-}
+# data = {
+#     'Category': ['A', 'B', 'C', 'D'],
+#     'Values'  : [10, 20, 15, 30]
+# }
+data = pd.read_csv("/Users/marta/Documents_/Andrew_project/health_project/euro_stats/df_final.csv")
 df = pd.DataFrame(data)
 
 
@@ -29,7 +30,7 @@ st.title("Simple Bar Chart in Streamlit edited by Marta")
 st.write("Hello, Streamlit!")
 
 # Display the DataFrame
-st.write("Sample DataFrame:")
+st.write("Healthcare Project DataFrame:")
 st.write(df)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
