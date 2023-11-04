@@ -9,12 +9,8 @@ import pandas as pd
 # data
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
-# Create a DataFrame
-# data = {
-#     'Category': ['A', 'B', 'C', 'D'],
-#     'Values'  : [10, 20, 15, 30]
-# }
-data = pd.read_csv("/Users/marta/Documents_/Andrew_project/health_project/euro_stats/df_final.csv")
+# test importing data from github
+data = pd.read_csv("suicide_data_2019.csv")
 df = pd.DataFrame(data)
 
 
@@ -29,11 +25,12 @@ st.title("Simple Bar Chart in Streamlit edited by Marta")
 # Display a message
 st.write("Hello, Streamlit!")
 
-# Display the DataFrame
+# Display head of the DataFrame
 st.write("Healthcare Project DataFrame:")
-st.write(df)
+
+df_head = df.head()
+st.write(df_head)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # graph
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-
