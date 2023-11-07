@@ -16,7 +16,12 @@ folder_path = os.getcwd()
 file_name = "df_final.csv"
 full_path = os.path.join(folder_path, file_name)
 
+<<<<<<< HEAD
 data = pd.read_csv(full_path)
+=======
+# test importing data from github
+data = pd.read_csv("suicide_data_2019.csv")
+>>>>>>> 128123e9d9c5bb39640b8fa5843ac7be5151ca12
 df = pd.DataFrame(data)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -29,8 +34,9 @@ st.title("Simple Bar Chart in Streamlit edited by Marta")
 # Display a message
 st.write("Hello, Streamlit!")
 
-# Display the DataFrame
+# Display head of the DataFrame
 st.write("Healthcare Project DataFrame:")
+<<<<<<< HEAD
 st.write(df)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # graph
@@ -67,3 +73,12 @@ plt.yticks(y_axis, countries, fontsize=16)
 plt.title("Causes of death per EU country", fontsize=30)
 plt.legend()
 st.pyplot(fig)
+=======
+
+df_head = df.head()
+st.write(df_head)
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+# graph
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+>>>>>>> 128123e9d9c5bb39640b8fa5843ac7be5151ca12
