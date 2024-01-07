@@ -4,7 +4,7 @@
 
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt  # comment out for now as it triggers error
+import matplotlib as plt  # comment out for now as it triggers error
 import os
 import numpy as np
 
