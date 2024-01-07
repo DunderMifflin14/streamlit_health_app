@@ -4,7 +4,7 @@
 
 import streamlit as st
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt  # comment out for now as it triggers error
 import os
 import numpy as np
 
@@ -40,6 +40,12 @@ st.bar_chart(df, y="OBS_VALUE", x="geo", color="top_no")
 # streamlit method - horizontal graph
 st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------
+# matplotlib graph
+# ----------------------------------------------------------------------------------------------------------------------------------------------
+
+'''comment out for now as strealit triggers error when the module is imported'''
 # # matplotlib method
 # fig, ax = plt.subplots()
 # y = df.geo
@@ -71,8 +77,9 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 # # ax.legend()
 # st.pyplot(fig)
 
-# df_head = df.head()
-# st.write(df_head)
+
+df_head = df.head()
+st.write(df_head)
 
 # # ---------------------------------------------------------------------------------------------------------------------------------------------
 # # graph
