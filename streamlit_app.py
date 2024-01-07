@@ -4,6 +4,7 @@
 
 import streamlit as st
 import pandas as pd
+import matplotlib as plt
 import os
 import numpy as np
 
@@ -22,7 +23,7 @@ df = pd.DataFrame(data)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
 # Streamlit app title
-st.title("Simple Bar Chart in Streamlit edited by Marta")
+st.title("Streamlit Health App")
 
 # Display a message
 st.write("Hello, Streamlit!")
