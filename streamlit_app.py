@@ -54,7 +54,6 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 # countries = df.geo.unique()
 # num_countries = len(countries)
 
-# y_axis = np.arange(num_countries)
 
 # first_causes = df.loc[df.top_no == '1']
 # second_causes = df.loc[df.top_no == '2']
@@ -81,6 +80,4 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 df_head = df.head()
 st.write(df_head)
 
-# # ---------------------------------------------------------------------------------------------------------------------------------------------
-# # graph
-# # ---------------------------------------------------------------------------------------------------------------------------------------------
+
