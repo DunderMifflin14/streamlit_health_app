@@ -105,14 +105,18 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 # # ---------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
 # Sample data
-x = [1, 2, 3, 4]
-y = [10, 15, 7, 12]
+categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4']
+values = [10, 15, 7, 12]
 
-# Plotting the data
-plt.plot(x, y, marker='o', linestyle='-')
 
-# Display the plot
+plt.bar(categories, values)
+
+
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Simple Bar Plot')
+
+
 plt.show()
 
