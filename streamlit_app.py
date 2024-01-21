@@ -45,40 +45,40 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 # matplotlib graph
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
-# '''comment out for now as strealit triggers error when the module is imported'''
-# # matplotlib method
-# fig, ax = plt.subplots()
-# y = df.geo
-# x = df.OBS_VALUE
+'''comment out for now as strealit triggers error when the module is imported'''
+# matplotlib method
+fig, ax = plt.subplots()
+y = df.geo
+x = df.OBS_VALUE
 
-# countries = df.geo.unique()
-# num_countries = len(countries)
-
-
-# first_causes = df.loc[df.top_no == '1']
-# second_causes = df.loc[df.top_no == '2']
-# third_causes = df.loc[df.top_no == '3']
-# bar_height = 0.3
-
-# ax.barh(y_axis + bar_height, first_causes.OBS_VALUE, height = bar_height)
-# ax.barh(y_axis, second_causes.OBS_VALUE, height = bar_height)
-# ax.barh(y_axis-bar_height, third_causes.OBS_VALUE, height = bar_height)
-
-# # # Add labels to the bars using plt.text
-# # for i in range(len(countries)):
-# #     ax.text(first_causes.OBS_VALUE.iloc[i] + 1, i + bar_height, first_causes.icd10.iloc[i], va='center', fontsize=14, style = 'italic')
-# #     ax.text(second_causes.OBS_VALUE.iloc[i] + 1, i, second_causes.icd10.iloc[i], va='center', fontsize=14, style = 'italic')
-# #     ax.text(third_causes.OBS_VALUE.iloc[i] + 1, i - bar_height, third_causes.icd10.iloc[i], va='center', fontsize=14, style = 'italic')
-
-# # ax.yticks(y_axis, countries, fontsize=16)
-# ax.barh(x, y, 0.5)
-# # ax.title("Causes of death per EU country", fontsize=30)
-# # ax.legend()
-# st.pyplot(fig)
+countries = df.geo.unique()
+num_countries = len(countries)
 
 
-# df_head = df.head()
-# st.write(df_head)
+first_causes = df.loc[df.top_no == '1']
+second_causes = df.loc[df.top_no == '2']
+third_causes = df.loc[df.top_no == '3']
+bar_height = 0.3
+
+ax.barh(y_axis + bar_height, first_causes.OBS_VALUE, height = bar_height)
+ax.barh(y_axis, second_causes.OBS_VALUE, height = bar_height)
+ax.barh(y_axis-bar_height, third_causes.OBS_VALUE, height = bar_height)
+
+# # Add labels to the bars using plt.text
+# for i in range(len(countries)):
+#     ax.text(first_causes.OBS_VALUE.iloc[i] + 1, i + bar_height, first_causes.icd10.iloc[i], va='center', fontsize=14, style = 'italic')
+#     ax.text(second_causes.OBS_VALUE.iloc[i] + 1, i, second_causes.icd10.iloc[i], va='center', fontsize=14, style = 'italic')
+#     ax.text(third_causes.OBS_VALUE.iloc[i] + 1, i - bar_height, third_causes.icd10.iloc[i], va='center', fontsize=14, style = 'italic')
+
+# ax.yticks(y_axis, countries, fontsize=16)
+ax.barh(x, y, 0.5)
+# ax.title("Causes of death per EU country", fontsize=30)
+# ax.legend()
+st.pyplot(fig)
+
+
+df_head = df.head()
+st.write(df_head)
 
 
 
@@ -106,15 +106,4 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 
 
 
-
-
-# Sample data
-x = [1, 2, 3, 4]
-y = [10, 15, 7, 12]
-
-# Plotting the data
-plt.plot(x, y, marker='o', linestyle='-')
-
-# Display the plot
-plt.show()
 
