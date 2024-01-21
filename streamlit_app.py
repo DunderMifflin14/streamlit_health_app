@@ -56,6 +56,8 @@ second_causes = df.loc[df.top_no == '2']
 third_causes = df.loc[df.top_no == '3']
 bar_height = 0.3
 
+
+
 # ax.barh(y_axis + bar_height, first_causes.OBS_VALUE, height = bar_height)
 # ax.barh(y_axis, second_causes.OBS_VALUE, height = bar_height)
 # ax.barh(y_axis-bar_height, third_causes.OBS_VALUE, height = bar_height)
@@ -78,3 +80,4 @@ st.write(df_head)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # graph
 # ---------------------------------------------------------------------------------------------------------------------------------------------
+# stworzyc nowy file i sie odwolac tylko do niej w streamlit_app.py
