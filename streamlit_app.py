@@ -4,7 +4,7 @@
 
 import streamlit as st
 import pandas as pd
-import matplotlib as plt  # comment out for now as it triggers error
+import matplotlib # comment out for now as it triggers error
 import os
 import numpy as np
 
@@ -79,5 +79,30 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 
 df_head = df.head()
 st.write(df_head)
+
+
+
+
+
+# ax.barh(y_axis + bar_height, first_causes.OBS_VALUE, height = bar_height)
+# ax.barh(y_axis, second_causes.OBS_VALUE, height = bar_height)
+# ax.barh(y_axis-bar_height, third_causes.OBS_VALUE, height = bar_height)
+# =======
+# y_axis = np.arange(num_countries)
+
+
+
+
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+# graph
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+# stworzyc nowy file i sie odwolac tylko do niej w streamlit_app.py
+
+# # ---------------------------------------------------------------------------------------------------------------------------------------------
+# # graph
+# # ---------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
