@@ -1,0 +1,72 @@
+
+
+
+
+
+dict_country_names_suicidal_vs_github:
+  "Iceland"                                               : "Iceland"
+  "Malta"                                                 : "Malta"
+  "Armenia"                                               : "Armenia"
+  "Ireland"                                               : "Ireland"
+  "Greece"                                                : "Greece"
+  "Cyprus"                                                : "Cyprus"
+  "Italy"                                                 : "Italy"
+  "Serbia"                                                : "Republic of Serbia"
+  "Türkiye"                                               : "Turkey"
+  "Albania"                                               : "Albania"
+  "Azerbaijan"                                            : "Azerbaijan"
+  "Romania"                                               : "Romania"
+  "Georgia"                                               : "Georgia"
+  "Portugal"                                              : "Portugal"
+  "Spain"                                                 : "Spain"
+  "Slovakia"                                              : "Slovakia"
+  "Latvia"                                                : "Latvia"
+  "France"                                                : "France"
+  "Slovenia"                                              : "Slovenia"
+  "Turkmenistan"                                          : "Turkmenistan"
+  "Belarus"                                               : "Belarus"
+  "Switzerland"                                           : "Switzerland"
+  "Germany"                                               : "Germany"
+  "Croatia"                                               : "Croatia"
+  "Denmark"                                               : "Denmark"
+  "Uzbekistan"                                            : "Uzbekistan"
+  "Belgium"                                               : "Belgium"
+  "Bulgaria"                                              : "Bulgaria"
+  "Norway"                                                : "Norway"
+  "Kazakhstan"                                            : "Kazakhstan"
+  "Netherlands"                                           : "Netherlands"
+  "Montenegro"                                            : "Montenegro"
+  "Bosnia and Herzegovina"                                : "Bosnia and Herzegovina"
+  "Sweden"                                                : "Sweden"
+  "Kyrgyzstan"                                            : "Kyrgyzstan"
+  "Russian Federation"                                    : "Russia"
+  "Finland"                                               : "Finland"
+  "Tajikistan"                                            : "Tajikistan"
+  "Czechia"                                               : "Czech Republic"
+  "Lithuania"                                             : "Lithuania"
+  "Austria"                                               : "Austria"
+  "Poland"                                                : "Poland"
+  "Hungary"                                               : "Hungary"
+  "Luxembourg"                                            : "Luxembourg"
+  "Republic of Moldova"                                   : "Moldova"
+  "Estonia"                                               : "Estonia"
+  "Ukraine"                                               : "Ukraine"
+  "The former Yugoslav Republic of Macedonia"             : "Macedonia"
+  "United Kingdom of Great Britain and Northern Ireland"  : "United Kingdom"
+
+
+estern_european_countries:
+  - Armenia
+  - Azerbaijan
+  - Georgia
+  - Turkmenistan
+  - Belarus
+  - Uzbekistan
+  - Kazakhstan
+  - Russia
+  - Tajikistan
+  - Kyrgyzstan
+  - Moldova
+  - Ukraine
+  - Turkey
+  - Israel
