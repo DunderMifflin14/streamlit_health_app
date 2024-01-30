@@ -10,7 +10,7 @@ import os
 import numpy as np
 
 # custom modules
-from create_graph import CreateGraph
+from create_graph import CreateGraph, Matlab
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # data
@@ -50,7 +50,7 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
 # call the function here
-
-
+Matlab(df)
+CreateGraph(df)
 
 
