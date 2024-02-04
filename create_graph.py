@@ -5,6 +5,7 @@ import streamlit as st
 
 
 def StreamlitMethod(df):
+    st.write("StreamlitMethod function")
     # Streamlit app title
     st.title("Streamlit Health App")
 
@@ -23,9 +24,9 @@ def StreamlitMethod(df):
 
     return st
 
-
 def CreateGraph(df):
     # Sample data
+    st.write("CreateGraph function")
     categories = df.icd10
     values = df.OBS_VALUE
     countries = df.geo
@@ -34,22 +35,22 @@ def CreateGraph(df):
     st.bar_chart(df, x="icd10", y="OBS_VALUE")
     return st
 
-
-def Matlab(df):
-    df_final = df
-    y = df_final.geo
-    x = df_final.OBS_VALUE
-
-    countries = df_final.geo.unique()
+def Matlab(df): 
+    st.write("Matlab function")
+    x = df.OBS_VALUE
+    y = df.geo
+    countries = df.geo.unique()
     num_countries = len(countries)
 
     y_axis = np.arange(num_countries)
-    plt.figure(figsize=(8, 8))
-    first_causes = df_final.loc[df_final.top_no == '1']
-    second_causes = df_final.loc[df_final.top_no == '2']
-    third_causes = df_final.loc[df_final.top_no == '3']
+
     bar_height = 0.3
 
+    first_causes = df.loc[df.top_no == 1]
+    second_causes = df.loc[df.top_no == 2]
+    third_causes = df.loc[df.top_no == 3]
+
+    fig = plt.figure(figsize=(20,30)) 
     plt.barh(y_axis + bar_height, first_causes.OBS_VALUE, height=bar_height)
     plt.barh(y_axis, second_causes.OBS_VALUE, height=bar_height)
     plt.barh(y_axis-bar_height, third_causes.OBS_VALUE, height=bar_height)
@@ -65,13 +66,35 @@ def Matlab(df):
     plt.yticks(y_axis, countries, fontsize=16)
     plt.title("Causes of death per EU country", fontsize=30)
     plt.legend()
-    # fig = plt.figure(figsize=8)
-    # plt.bar(x=df.OBS_VALUE, y=df.geo)
-    # st.pyplot(fig)
-    st.pyplot(plt.gcf())  # global
+    st.pyplot(fig)
     return st
 
+def Scatter(df):
+    st.write("Scatter function")
+    st.scatter_chart(
+        df,
+        x='geo',
+        y='icd10',
+        color='top_no',
+        size='OBS_VALUE',
+    )
 
-def AltairMethod(df):
+    st.scatter_chart(
+        df,
+        y='geo',
+        x='icd10',
+        color='top_no',
+        size='OBS_VALUE',
+    )
+
+    return st
+
+def BarChart(df):
+    st.write("BarChart function")
+    # streamlit method - vertical graph
+    st.bar_chart(df, y="OBS_VALUE", x="geo", color="top_no")
+
+    # streamlit method - horizontal graph
+    # st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 
     return st

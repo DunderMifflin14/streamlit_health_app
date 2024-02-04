@@ -10,7 +10,7 @@ import os
 import numpy as np
 
 # custom modules
-from create_graph import CreateGraph, Matlab
+from create_graph import CreateGraph, Matlab, Scatter, BarChart
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # data
@@ -34,15 +34,11 @@ st.write("Hello, Streamlit!")
 
 # Display head of the DataFrame
 st.write("Healthcare Project DataFrame:")
-st.write(df)
+
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # graph
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-# streamlit method - vertical graph
-st.bar_chart(df, y="OBS_VALUE", x="geo", color="top_no")
-
-# streamlit method - horizontal graph
-st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------
@@ -50,7 +46,8 @@ st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
 # call the function here
+BarChart(df)
 Matlab(df)
-CreateGraph(df)
+Scatter(df)
 
 
