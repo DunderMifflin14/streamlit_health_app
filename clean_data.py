@@ -18,14 +18,17 @@ with open("config.yml", 'r') as file:
     config = yaml.safe_load(file)
 
 
-def CleanSuicideData(raw_dataset: str) -> None:
+def CleanSuicideData(raw_dataset_name: str, config_file: dict) -> None:
     """
-    Description: ADD
-    Input: ADD
-    Returns: ADD
+    Description:
+        - cleans raw dataset for suicide data and saves it as csv
+    Input: 
+        - raw_dataset: name of the raw dataset to be processed
+        - config_file: parsed python dictionary with global variables 
+    Returns:
+        - None, rather saves cleaned csv file
     """
 
-    # df_suicidal_data = pd.read_csv('suicide_data_2019.csv')
     df_suicidal_data = pd.read_csv(raw_dataset)
     # check st.file_uploader LATER
 
@@ -33,8 +36,7 @@ def CleanSuicideData(raw_dataset: str) -> None:
                                                                     'ParentLocation'] == 'Europe']
 
     # URL of the JSON file
-    country_geo = 'https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json'
-
+    country_geo = config["country_geo"]
     # Send a GET request to retrieve the JSON data
     response = requests.get(country_geo)
 
@@ -98,5 +100,5 @@ def CleanSuicideData(raw_dataset: str) -> None:
 
 if __name__ == "__main__":
 
-    CleanSuicideData('suicide_data_2019.csv')
-    # print(config['dict_country_names_suicidal_vs_github'])
+    CleanSuicideData(raw_dataset_name='suicide_data_2019.csv',
+                     config_file=config)
