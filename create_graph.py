@@ -1,3 +1,5 @@
+
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -24,6 +26,7 @@ def StreamlitMethod(df):
 
     return st
 
+
 def CreateGraph(df):
     # Sample data
     st.write("CreateGraph function")
@@ -35,7 +38,8 @@ def CreateGraph(df):
     st.bar_chart(df, x="icd10", y="OBS_VALUE")
     return st
 
-def Matlab(df): 
+
+def Matlab(df):
     st.write("Matlab function")
     x = df.OBS_VALUE
     y = df.geo
@@ -50,7 +54,7 @@ def Matlab(df):
     second_causes = df.loc[df.top_no == 2]
     third_causes = df.loc[df.top_no == 3]
 
-    fig = plt.figure(figsize=(20,30)) 
+    fig = plt.figure(figsize=(20, 30))
     plt.barh(y_axis + bar_height, first_causes.OBS_VALUE, height=bar_height)
     plt.barh(y_axis, second_causes.OBS_VALUE, height=bar_height)
     plt.barh(y_axis-bar_height, third_causes.OBS_VALUE, height=bar_height)
@@ -66,8 +70,9 @@ def Matlab(df):
     plt.yticks(y_axis, countries, fontsize=16)
     plt.title("Causes of death per EU country", fontsize=30)
     plt.legend()
-    st.pyplot(fig)
+    st.pyplot(plt.gcf())  # global
     return st
+
 
 def Scatter(df):
     st.write("Scatter function")
@@ -88,6 +93,7 @@ def Scatter(df):
     )
 
     return st
+
 
 def BarChart(df):
     st.write("BarChart function")
