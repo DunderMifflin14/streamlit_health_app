@@ -19,10 +19,10 @@ def StreamlitMethod(df):
     st.write(df)
 
     # streamlit method - vertical graph
-    st.bar_chart(df, y="OBS_VALUE", x="geo", color="top_no")
+    st.bar_chart(df, y="value", x="geo", color="rank")
 
     # streamlit method - horizontal graph
-    st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
+    st.bar_chart(df, x="value", y="geo", color="rank")
 
     return st
 
@@ -30,18 +30,18 @@ def StreamlitMethod(df):
 def CreateGraph(df):
     # Sample data
     st.write("CreateGraph function")
-    categories = df.icd10
-    values = df.OBS_VALUE
+    categories = df.cause
+    values = df.value
     countries = df.geo
-    rank = df.top_no
+    rank = df.rank
 
-    st.bar_chart(df, x="icd10", y="OBS_VALUE")
+    st.bar_chart(df, x="cause", y="value")
     return st
 
 
 def Matlab(df):
     st.write("Matlab function")
-    x = df.OBS_VALUE
+    x = df.value
     y = df.geo
     countries = df.geo.unique()
     num_countries = len(countries)
@@ -50,22 +50,22 @@ def Matlab(df):
 
     bar_height = 0.3
 
-    first_causes = df.loc[df.top_no == 1]
-    second_causes = df.loc[df.top_no == 2]
-    third_causes = df.loc[df.top_no == 3]
+    first_causes = df.loc[df.rank == 'first']
+    second_causes = df.loc[df.rank == 'second']
+    third_causes = df.loc[df.rank == 'third']
 
     fig = plt.figure(figsize=(20, 30))
-    plt.barh(y_axis + bar_height, first_causes.OBS_VALUE, height=bar_height)
-    plt.barh(y_axis, second_causes.OBS_VALUE, height=bar_height)
-    plt.barh(y_axis-bar_height, third_causes.OBS_VALUE, height=bar_height)
+    plt.barh(y_axis + bar_height, first_causes.value, height=bar_height)
+    plt.barh(y_axis, second_causes.value, height=bar_height)
+    plt.barh(y_axis-bar_height, third_causes.value, height=bar_height)
     # Add labels to the bars using plt.text
     for i in range(len(countries)):
-        plt.text(first_causes.OBS_VALUE.iloc[i] + 1, i + bar_height,
-                 first_causes.icd10.iloc[i], va='center', fontsize=14, style='italic')
-        plt.text(second_causes.OBS_VALUE.iloc[i] + 1, i,
-                 second_causes.icd10.iloc[i], va='center', fontsize=14, style='italic')
-        plt.text(third_causes.OBS_VALUE.iloc[i] + 1, i - bar_height,
-                 third_causes.icd10.iloc[i], va='center', fontsize=14, style='italic')
+        plt.text(first_causes.value.iloc[i] + 1, i + bar_height,
+                 first_causes.cause.iloc[i], va='center', fontsize=14, style='italic')
+        plt.text(second_causes.value.iloc[i] + 1, i,
+                 second_causes.cause.iloc[i], va='center', fontsize=14, style='italic')
+        plt.text(third_causes.value.iloc[i] + 1, i - bar_height,
+                 third_causes.cause.iloc[i], va='center', fontsize=14, style='italic')
 
     plt.yticks(y_axis, countries, fontsize=16)
     plt.title("Causes of death per EU country", fontsize=30)
@@ -79,17 +79,17 @@ def Scatter(df):
     st.scatter_chart(
         df,
         x='geo',
-        y='icd10',
-        color='top_no',
-        size='OBS_VALUE',
+        y='cause',
+        color='rank',
+        size='value',
     )
 
     st.scatter_chart(
         df,
         y='geo',
-        x='icd10',
-        color='top_no',
-        size='OBS_VALUE',
+        x='cause',
+        color='rank',
+        size='value',
     )
 
     return st
@@ -98,7 +98,7 @@ def Scatter(df):
 def BarChart(df):
     st.write("BarChart function")
     # streamlit method - vertical graph
-    st.bar_chart(df, y="OBS_VALUE", x="geo", color="top_no")
+    st.bar_chart(df, y="value", x="geo", color="rank")
 
     # streamlit method - horizontal graph
     # st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
