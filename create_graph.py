@@ -103,4 +103,3 @@ def BarChart(df):
     # streamlit method - horizontal graph
     # st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
 
-    return st
