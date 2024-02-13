@@ -24,7 +24,7 @@ def StreamlitMethod(df):
     # streamlit method - horizontal graph
     st.bar_chart(df, x="value", y="geo", color="rank")
 
-    return st
+
 
 
 def CreateGraph(df):
@@ -36,7 +36,7 @@ def CreateGraph(df):
     rank = df.rank
 
     st.bar_chart(df, x="cause", y="value")
-    return st
+
 
 
 def Matlab(df):
@@ -71,7 +71,7 @@ def Matlab(df):
     plt.title("Causes of death per EU country", fontsize=30)
     plt.legend()
     st.pyplot(plt.gcf())  # global
-    return st
+
 
 
 def Scatter(df):
@@ -92,7 +92,7 @@ def Scatter(df):
         size='value',
     )
 
-    return st
+
 
 
 def BarChart(df):
