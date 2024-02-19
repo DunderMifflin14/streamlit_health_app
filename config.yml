@@ -73,3 +73,21 @@ estern_european_countries:
 
 
 country_geo: "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json"
+
+
+
+causes_of_death:
+  - "heart disease"
+  - "high blood pressure"
+  - "smoking"
+  - "air pollution"
+  - "high blood sugar"
+  - "obesity"
+  - "alzheimers"
+  - "diabetes"
+  - "car accident"
+  - "accident"
+  - "HIV"
+  - "murder"
+  - "terrorism"
+  - "malaria"
