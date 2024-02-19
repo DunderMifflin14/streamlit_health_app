@@ -45,7 +45,7 @@ st.write("Healthcare Project DataFrame:")
 BarChart(df)
 # Matlab(df)
 Scatter(df)
-Map(df)
+# Map(df)
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # suicide graph
