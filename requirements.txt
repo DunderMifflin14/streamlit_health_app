@@ -5,4 +5,4 @@ yaml
 requests
 re
 folium
-streamlit-folium
+streamlit_folium
