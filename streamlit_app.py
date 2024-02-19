@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt  # comment out for now as it triggers error
 import os
 import numpy as np
 import folium
-import streamlit_folium
+from streamlit_folium import folium_static
 
 
 # custom modules
