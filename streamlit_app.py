@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt  # comment out for now as it triggers error
 import os
 import numpy as np
 import folium
-from streamlit_folium import folium_static
+import streamlit_folium
+
 
 # custom modules
 from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map
