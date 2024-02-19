@@ -10,7 +10,7 @@ import os
 import numpy as np
 
 # custom modules
-from create_graph import CreateGraph, Matlab, Scatter, BarChart
+from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map
 from create_suicide_graph import CreateSuicideGraph
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ st.write("Healthcare Project DataFrame:")
 BarChart(df)
 # Matlab(df)
 Scatter(df)
-
+Map(df)
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # suicide graph

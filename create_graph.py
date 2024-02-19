@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import streamlit as st
+import os
 
 
 def StreamlitMethod(df):
@@ -81,7 +82,7 @@ def Scatter(df):
         x='geo',
         y='cause',
         color='rank',
-        size='value',
+        # size='value',
     )
 
     st.scatter_chart(
@@ -93,8 +94,6 @@ def Scatter(df):
     )
 
 
-
-
 def BarChart(df):
     st.write("BarChart function")
     # streamlit method - vertical graph
@@ -102,4 +101,18 @@ def BarChart(df):
 
     # streamlit method - horizontal graph
     # st.bar_chart(df, x="OBS_VALUE", y="geo", color="top_no")
+
+def Map(df):
+    countries = df.geo.unique()
+
+    for country in countries:
+        lon = df.loc[(df['geo'] == country), df.longitude.unique()]
+        lat = df.loc[(df['geo'] == country), df.latitude.unique]
+        # stat_value = df.loc[(df['geo'] == country), df.value]
+
+        df_map = pd.DataFrame(
+        np.random.randn(1000, 2) / [2, 2] + [lon, lat],
+        columns=['lat', 'lon'])
+
+    st.map(df_map)
 
