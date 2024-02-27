@@ -3,7 +3,5 @@ numpy
 pandas
 yaml
 requests
-re
-
 
 
