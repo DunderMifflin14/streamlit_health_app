@@ -12,7 +12,6 @@ import requests
 import folium
 import yaml
 from typing import Dict
-
 # read config file
 with open("config.yml", 'r') as file:
     config = yaml.safe_load(file)
@@ -23,13 +22,13 @@ def CleanSuicideData(raw_dataset_name: str, config_file: dict) -> None:
     Description:
         - cleans raw dataset for suicide data and saves it as csv
     Input: 
-        - raw_dataset: name of the raw dataset to be processed
+        - raw_dataset_name: name of the raw dataset to be processed
         - config_file: parsed python dictionary with global variables 
     Returns:
         - None, rather saves cleaned csv file
     """
 
-    df_suicidal_data = pd.read_csv(raw_dataset)
+    df_suicidal_data = pd.read_csv(raw_dataset_name)
     # check st.file_uploader LATER
 
     df_suicidal_data_europe = df_suicidal_data[df_suicidal_data.loc[:,
