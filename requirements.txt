@@ -1,6 +1,10 @@
 matplotlib
 numpy
 pandas
+requests
+re
+folium
+streamlit_folium
 
 
 
