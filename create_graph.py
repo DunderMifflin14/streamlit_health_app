@@ -106,13 +106,29 @@ def Map(df):
     countries = df.geo.unique()
 
     for country in countries:
-        lon = df.loc[(df['geo'] == country), df.longitude.unique()]
-        lat = df.loc[(df['geo'] == country), df.latitude.unique]
-        # stat_value = df.loc[(df['geo'] == country), df.value]
+        lon = df.loc[(df['geo'] == country) & (df['rank'] == "first"), 'longitude']
+        lat = df.loc[(df['geo'] == country) & (df['rank'] == "first"), 'latitude']
+        stat_value = df.loc[(df['geo'] == country) & (df['rank'] == "first"), 'value']
+
+        lon = lon.astype(str)
+        lon = [s.strip("[]") for s in lon]
+        lat = lat.astype(str)
+        lat = [s.strip("[]") for s in lat]
+
+        lon = lon[0]
+        lat = lat[0]
+        print(country)
+        print(lat)
+        print(lon)
 
         df_map = pd.DataFrame(
-        np.random.randn(1000, 2) / [2, 2] + [lon, lat],
+        np.random.randn(1000, 2) / [2, 2] + [lat, lon],
         columns=['lat', 'lon'])
 
     st.map(df_map)
 
+def Map2():
+    df_map = pd.DataFrame(
+        np.random.randn(1000, 2) / [50, 10] + [51.1, -1.4],
+        columns=['lat', 'lon'])
+    st.map(df_map)
