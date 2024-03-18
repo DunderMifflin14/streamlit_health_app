@@ -5,11 +5,12 @@
 # standard libraries
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt  # comment out for now as it triggers error
+import matplotlib as plt  # comment out for now as it triggers error
 import os
 import numpy as np
 import folium
 from streamlit_folium import folium_static
+from pywaffle import Waffle
 
 
 # custom modules
@@ -21,6 +22,7 @@ from create_map import CreateMap
 
 
 from suicide_data_map import DisplaySuicideMap
+from create_pictogram import CreatePictogramChart
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -70,3 +72,9 @@ CreateMap(df)
 CreateSuicideGraph()
 
 DisplaySuicideMap()
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------
+# pictogram
+# ----------------------------------------------------------------------------------------------------------------------------------------------
+
+CreatePictogramChart()
