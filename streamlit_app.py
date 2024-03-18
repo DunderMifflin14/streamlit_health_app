@@ -8,11 +8,20 @@ import pandas as pd
 import matplotlib.pyplot as plt  # comment out for now as it triggers error
 import os
 import numpy as np
+import folium
+from streamlit_folium import folium_static
+
 
 # custom modules
 from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map, Map2
 from create_suicide_graph import CreateSuicideGraph
+
+
 from create_map import CreateMap
+
+
+from suicide_data_map import DisplaySuicideMap
+
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # data
@@ -46,7 +55,11 @@ st.write("Healthcare Project DataFrame:")
 BarChart(df)
 # Matlab(df)
 Scatter(df)
+
 # Map(df)
+
+
+
 # Map2()
 
 CreateMap(df)
@@ -55,3 +68,5 @@ CreateMap(df)
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
 CreateSuicideGraph()
+
+DisplaySuicideMap()
