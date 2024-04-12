@@ -1,8 +1,6 @@
 
 
 
-
-
 dict_country_names_suicidal_vs_github:
   "Iceland"                                               : "Iceland"
   "Malta"                                                 : "Malta"
@@ -91,3 +89,8 @@ causes_of_death:
   - "murder"
   - "terrorism"
   - "malaria"
+
+
+file_names:
+  "cause_count_raw"       : "cause_count.csv"
+  "cause_count_processed" : "cause_count_news.csv"

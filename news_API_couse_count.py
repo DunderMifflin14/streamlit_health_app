@@ -8,6 +8,9 @@ import yaml
 
 
 def NewsAPICauseCount():
+    '''
+    outputs csv with count of the death causes found/mentioned in news articles
+    '''
 
     # read config file
     with open("config.yml", 'r') as file:
