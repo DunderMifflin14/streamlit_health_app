@@ -20,12 +20,13 @@ with open("config.yml", 'r') as file:
 def CleanSuicideData(raw_dataset_name: str, config_file: dict) -> None:
     """
     Description:
-        - cleans raw dataset for suicide data and saves it as csv
+        - cleans raw death cause count dataset (created from scraping news articles)
+        and saves it as csv
     Input: 
         - raw_dataset_name: name of the raw dataset to be processed
         - config_file: parsed python dictionary with global variables 
     Returns:
-        - None, rather saves cleaned csv file
+        - None, purely saves cleaned csv file
     """
 
     df_suicidal_data = pd.read_csv(raw_dataset_name)

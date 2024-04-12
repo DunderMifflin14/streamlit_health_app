@@ -1,41 +1,52 @@
-
 import streamlit as st
+import matplotlib.pyplot as plt
 from pywaffle import Waffle
-import matplotlib as plt
+import pandas as pd
 
 
 def CreatePictogramChart():
-    # # Streamlit app
-    # st.title("PyWaffle Example")
+    '''
+    Displays pictogram with proportion of death causes (per 100,000 in western europe?)
+    '''
 
-    # # Data
-    # data = {'Category A': 30, 'Category B': 20, 'Category C': 50}
+    # --------------------------------------------------------------------------------------------
+    # get data values to display in pictogram
+    # --------------------------------------------------------------------------------------------
+    # read dataset with most common death causes  per country
+    df_death_causes = pd.read_csv('df_final.csv')
+    df_total_per_cause = df_death_causes.groupby(
+        'cause')['value'].sum().reset_index().sort_values(by='value', ascending=False)
 
-    # # Create a Waffle chart
-    # fig = Waffle(
-    #     data=data,
-    #     rows=5,  # Number of rows in the chart
-    #     columns=10,  # Number of columns in the chart
-    #     colors=["#232066", "#983D3D", "#DCB732"],  # Colors for each category
-    #     legend={'loc': 'upper left', 'bbox_to_anchor': (1, 1)}
-    # )
+    # now convert to proportions of total deaths per cause
 
-    # # Display the Waffle chart in Streamlit
-    # st.pyplot(fig)
+    df_total_per_cause['death_prop'] = 100 * \
+        (df_total_per_cause['value']/df_total_per_cause['value'].sum())
+
+    # drop absolute values, they wont be used anymore
+    df_total_per_cause.drop(columns=['value'], inplace=True)
+
+    # convert to int to easily disply values on pictogram
+    df_total_per_cause['death_prop'] = df_total_per_cause['death_prop'].astype(
+        int)
+    # create a dictionary with cause name and corresponding death proportion value
+    dict_cause_death_prop = dict(
+        zip(df_total_per_cause['cause'], df_total_per_cause['death_prop']))
+
+    # --------------------------------------------------------------------------------------------
+    # display pictogram
+    # --------------------------------------------------------------------------------------------
 
     fig = plt.figure(
         FigureClass=Waffle,
         rows=5,
-        values=[30, 16, 4],
-        colors=["#FFA500", "#4384FF", "#C0C0C0"],
-        icons=['sun', 'cloud-showers-heavy', 'snowflake'],
+        columns=10,
+        values=dict_cause_death_prop,
+        icons='user',
         font_size=20,
-        icon_style='solid',
-        icon_legend=True,
-        legend={
-            'labels': ['Sun', 'Shower', 'Snow'],
-            'loc': 'upper left',
-            'bbox_to_anchor': (1, 1)
-        }
+        legend={'loc': 'upper left', 'bbox_to_anchor': (1, 1)}
     )
-    st.pyplot(fig)
+    # add title
+    st.subheader('Proportion of Death Causes')
+
+    # display pictogram
+    st.pyplot(plt.gcf())
