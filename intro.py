@@ -19,13 +19,11 @@ def IntroPage():
 
         st.markdown(
             """
-            Streamlit is an open-source app framework built specifically for
-            Machine Learning and Data Science projects.
 
             **👈 Select a demo from the dropdown on the left** to see some examples
-            of what Streamlit can do!
+            of what we've done!
 
-            ### Want to learn more?
+            ### Want to learn more abour Streamlit?
 
             - Check out [streamlit.io](https://streamlit.io)
             - Jump into our [documentation](https://docs.streamlit.io)
@@ -73,7 +71,7 @@ def IntroPage():
 
     def mapping_demo():
         import streamlit as st
-        from create_graph import Map2
+        from create_map import Map
 
         st.markdown(f'# {list(page_names_to_funcs.keys())[2]}')
         st.write(
@@ -87,13 +85,29 @@ def IntroPage():
 
         data = pd.read_csv(full_path)
         df = pd.DataFrame(data)
-        Map2()
+        Map()
 
+
+    def Pictogram():
+        from create_pictogram import CreatePictogramChart
+        import streamlit as st
+        import matplotlib.pyplot as plt
+        from pywaffle import Waffle
+        import pandas as pd
+        
+        st.markdown(f'# {list(page_names_to_funcs.keys())[3]}')
+        st.write(
+            """
+            This demo illustrates our Pictograms done by Andrew!
+            """
+        )
+        CreatePictogramChart()
 
     page_names_to_funcs = {
         "—": intro,
         "Plotting Demo": Plotting_Page,
-        "Mapping Demo": mapping_demo
+        "Mapping Demo": mapping_demo,
+        "Pictogram Demo": Pictogram
         # "DataFrame Demo": data_frame_demo
     }
 

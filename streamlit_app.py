@@ -14,7 +14,7 @@ import numpy as np
 
 
 # custom modules
-from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map, Map2
+from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map
 from create_suicide_graph import CreateSuicideGraph
 from intro import IntroPage
 

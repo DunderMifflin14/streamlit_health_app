@@ -127,8 +127,3 @@ def Map(df):
 
     st.map(df_map)
 
-def Map2():
-    df_map = pd.DataFrame(
-        np.random.randn(100000, 3) / [5, 5] + [51.1, -1.4],
-        columns=['lat', 'lon'])
-    st.map(df_map)
