@@ -8,21 +8,21 @@ import pandas as pd
 import matplotlib as plt  # comment out for now as it triggers error
 import os
 import numpy as np
-import folium
-from streamlit_folium import folium_static
-from pywaffle import Waffle
+# import folium
+# from streamlit_folium import folium_static
+# from pywaffle import Waffle
 
 
 # custom modules
 from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map, Map2
 from create_suicide_graph import CreateSuicideGraph
+from intro import IntroPage
+
+from settings_tab import SettingsTab
 
 
-from create_map import CreateMap
-
-
-from suicide_data_map import DisplaySuicideMap
-from create_pictogram import CreatePictogramChart
+# from suicide_data_map import DisplaySuicideMap
+# from create_pictogram import CreatePictogramChart
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -52,29 +52,29 @@ st.write("Healthcare Project DataFrame:")
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # matplotlib graph
 # ----------------------------------------------------------------------------------------------------------------------------------------------
-
-# call the function here
-BarChart(df)
-# Matlab(df)
-Scatter(df)
+IntroPage()
+# # call the function here
+# BarChart(df)
+# # Matlab(df)
+# Scatter(df)
 
 # Map(df)
 
 
 # Map2()
 
-CreateMap(df)
+# SettingsTab()
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # suicide graph
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
 # st.image("pictogram_chart.jpg")
-CreatePictogramChart()
+# CreatePictogramChart()
 
 
-CreateSuicideGraph()
+# CreateSuicideGraph()
 
-DisplaySuicideMap()
+# DisplaySuicideMap()
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # pictogram
