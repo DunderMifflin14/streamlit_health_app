@@ -55,8 +55,8 @@ st.write("Healthcare Project DataFrame:")
 IntroPage()
 # call the function here
 BarChart(df)
-Matlab(df)
-# Scatter(df)
+# Matlab(df)
+Scatter(df)
 
 # Map(df)
 
