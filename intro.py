@@ -103,6 +103,9 @@ def IntroPage():
         )
         CreatePictogramChart()
 
+
+    # add function here to display rest of the graphs in a separate tab!
+
     page_names_to_funcs = {
         "—": intro,
         "Plotting Demo": Plotting_Page,
