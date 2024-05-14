@@ -58,7 +58,7 @@ BarChart(df)
 # Matlab(df)
 Scatter(df)
 
-# Map(df)
+Map(df)
 
 
 # Map2()
