@@ -14,7 +14,8 @@ def IntroPage():
     def intro():
         import streamlit as st
 
-        st.write("## Welcome to the death stats page by Andrzej and Marta! 👋")
+        st.write("## Explore Health Statistics with Andrzej and Marta! 👋")
+
         st.sidebar.success("Select what you want to see above.")
 
         st.markdown(
