@@ -74,5 +74,5 @@ Scatter(df)
 
 CreateSuicideGraph()
 
-DisplaySuicideMap()
+# DisplaySuicideMap() # trigers an error
 
