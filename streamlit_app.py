@@ -53,32 +53,31 @@ st.write("Healthcare Project DataFrame:")
 # matplotlib graph
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 IntroPage()
-# # call the function here
-# BarChart(df)
-# # Matlab(df)
-# Scatter(df)
+# call the function here
+BarChart(df)
+Matlab(df)
+Scatter(df)
 
-# Map(df)
+Map(df)
 
 
-# Map2()
+Map2()
 
-# SettingsTab()
+SettingsTab()
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # suicide graph
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
-# st.image("pictogram_chart.jpg")
-# CreatePictogramChart()
+st.image("pictogram_chart.jpg")
+CreatePictogramChart()
 
 
-# CreateSuicideGraph()
+CreateSuicideGraph()
 
-# DisplaySuicideMap()
+DisplaySuicideMap()
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 # pictogram
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# Display the saved image
