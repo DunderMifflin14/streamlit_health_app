@@ -71,5 +71,5 @@ Scatter(df)
 
 CreateSuicideGraph()
 
-DisplaySuicideMap()
+# DisplaySuicideMap()
 
