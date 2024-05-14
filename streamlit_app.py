@@ -58,21 +58,21 @@ BarChart(df)
 # Matlab(df)
 Scatter(df)
 
-# Map(df)
+# Map(df) # triggers an error
 
 
-# Map2()
+# Map2() # triggers an error
 
-# SettingsTab()
+# SettingsTab() # trigers an error
+
 # # ----------------------------------------------------------------------------------------------------------------------------------------------
 # # suicide graph
 # # ----------------------------------------------------------------------------------------------------------------------------------------------
 
-# st.image("pictogram_chart.jpg")
-# CreatePictogramChart()
 
 
-# CreateSuicideGraph()
+
+CreateSuicideGraph()
 
 # DisplaySuicideMap()
 
