@@ -104,43 +104,23 @@ def IntroPage():
         )
         CreatePictogramChart()
 
-
-    # def Other_Graphs():
-    #     import streamlit as st
-    #     import matplotlib.pyplot as plt
-    #     import numpy as np
-    
-    
-    #     st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
-    #     st.write(
-    #         """
-    #         This demo illustrates a random simple graph!
-    #         """
-    #     )
-    
-    #     # Generate random data
-    #     x = np.random.rand(10)
-    #     y = np.random.rand(10)
-    
-    #     fig, ax = plt.subplots()
-    #     ax.scatter(x, y)
-    
-    #     st.pyplot(fig)
-
     def Other_Graphs():
         import streamlit as st
         import pandas as pd
         import os
         from create_suicide_graph import CreateSuicideGraph
+        from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map
 
         st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
         st.write(
             """
-            This demo illustrates a random simple graph!
+            This demo illustrates other graphs created by Marta and Andrzej!
             """
         )
 
         CreateSuicideGraph()
+        Scatter()
+        BarChart(df)
 
     # add function here to display rest of the graphs in a separate tab!
 
