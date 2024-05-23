@@ -53,13 +53,8 @@ st.write("Healthcare Project DataFrame:")
 # matplotlib graph
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 IntroPage()
-st.write("")
-st.write("")
-st.write("")
-st.write("### display the rest of the graphs, move them to a new tab later")
 
-# call the function here
-BarChart(df)
+
 # Matlab(df)
 
 # Map(df) # triggers an error
