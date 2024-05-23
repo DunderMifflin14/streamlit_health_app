@@ -109,7 +109,7 @@ def IntroPage():
         import pandas as pd
         import os
         from create_suicide_graph import CreateSuicideGraph
-        from create_graph import CreateGraph, Matlab, Scatter, BarChart, Map
+        
 
         st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
         st.write(
@@ -119,8 +119,8 @@ def IntroPage():
         )
 
         CreateSuicideGraph()
-        Scatter()
-        BarChart(df)
+        
+       
 
     # add function here to display rest of the graphs in a separate tab!
 
