@@ -9,6 +9,7 @@ import os
 # data = pd.read_csv(full_path)
 # df = pd.DataFrame(data)
 
+
 def IntroPage():
 
     def intro():
@@ -88,14 +89,13 @@ def IntroPage():
         df = pd.DataFrame(data)
         Map()
 
-
     def Pictogram():
         from create_pictogram import CreatePictogramChart
         import streamlit as st
         import matplotlib.pyplot as plt
         from pywaffle import Waffle
         import pandas as pd
-        
+
         st.markdown(f'# {list(page_names_to_funcs.keys())[3]}')
         st.write(
             """
@@ -104,6 +104,18 @@ def IntroPage():
         )
         CreatePictogramChart()
 
+    def Other_Graphs():
+        import streamlit as st
+        from create_suicide_graph import CreateSuicideGraph()
+
+        st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
+        st.write(
+            """
+            This demo illustrates a random simple graph!
+            """
+        )
+
+        CreateSuicideGraph()
 
     # add function here to display rest of the graphs in a separate tab!
 
@@ -111,13 +123,11 @@ def IntroPage():
         "—": intro,
         "Plotting Demo": Plotting_Page,
         "Mapping Demo": mapping_demo,
-        "Pictogram Demo": Pictogram
+        "Pictogram Demo": Pictogram,
+        "Other Graphs": Other_Graphs
         # "DataFrame Demo": data_frame_demo
     }
 
-    demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+    demo_name = st.sidebar.selectbox(
+        "Choose a demo", page_names_to_funcs.keys())
     page_names_to_funcs[demo_name]()
-
-
-    
-
