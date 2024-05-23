@@ -104,18 +104,18 @@ def IntroPage():
         )
         CreatePictogramChart()
 
-    def Other_Graphs():
-        import streamlit as st
-        from create_suicide_graph import CreateSuicideGraph()
+    # def Other_Graphs():
+    #     import streamlit as st
+    #     from create_suicide_graph import CreateSuicideGraph()
 
-        st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
-        st.write(
-            """
-            This demo illustrates a random simple graph!
-            """
-        )
+    #     st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
+    #     st.write(
+    #         """
+    #         This demo illustrates a random simple graph!
+    #         """
+    #     )
 
-        CreateSuicideGraph()
+    #     CreateSuicideGraph()
 
     # add function here to display rest of the graphs in a separate tab!
 
