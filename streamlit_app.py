@@ -61,7 +61,6 @@ st.write("### display the rest of the graphs, move them to a new tab later")
 # call the function here
 BarChart(df)
 # Matlab(df)
-Scatter(df)
 
 # Map(df) # triggers an error
 
@@ -71,10 +70,8 @@ Scatter(df)
 # SettingsTab() # trigers an error
 
 # # ----------------------------------------------------------------------------------------------------------------------------------------------
-# # suicide graph and map
+# # suicide map
 # # ----------------------------------------------------------------------------------------------------------------------------------------------
-
-CreateSuicideGraph()
 
 # DisplaySuicideMap() # trigers an error
 
