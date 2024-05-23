@@ -124,7 +124,7 @@ def IntroPage():
         "Plotting Demo": Plotting_Page,
         "Mapping Demo": mapping_demo,
         "Pictogram Demo": Pictogram,
-        "Other Graphs": Other_Graphs
+        # "Other Graphs": Other_Graphs
         # "DataFrame Demo": data_frame_demo
     }
 
