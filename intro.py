@@ -104,6 +104,28 @@ def IntroPage():
         )
         CreatePictogramChart()
 
+
+    def Other_Graphs():
+        import streamlit as st
+        import matplotlib.pyplot as plt
+        import numpy as np
+    
+        st.markdown(f'# {list(page_names_to_funcs.keys())[4]}')
+        st.write(
+            """
+            This demo illustrates a random simple graph!
+            """
+        )
+    
+        # Generate random data
+        x = np.random.rand(10)
+        y = np.random.rand(10)
+    
+        fig, ax = plt.subplots()
+        ax.scatter(x, y)
+    
+        st.pyplot(fig)
+
     # def Other_Graphs():
     #     import streamlit as st
     #     from create_suicide_graph import CreateSuicideGraph()
@@ -124,7 +146,7 @@ def IntroPage():
         "Plotting Demo": Plotting_Page,
         "Mapping Demo": mapping_demo,
         "Pictogram Demo": Pictogram,
-        # "Other Graphs": Other_Graphs
+        "Other Graphs": Other_Graphs,
         # "DataFrame Demo": data_frame_demo
     }
 
